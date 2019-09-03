@@ -1,0 +1,19 @@
+{
+  "Colors": {
+    "Favorite": "blue"
+  },
+  "ConnectionStrings": {
+    "DutchConnectionString": "User ID=postgres;Password=123;Host=localhost;Port=5433;Database=DatabaseRT;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  },
+  "Tokens": {
+    "Key": "hbeuywuhsvu9sf87ysvu3heiweiowewef",
+    "Issuer": "localhost",
+    "Audience": "users"
+  }
+}
