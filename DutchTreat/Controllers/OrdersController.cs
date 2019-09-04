@@ -87,13 +87,10 @@ namespace DutchTreat.Controllers
                         newOrder.OrderDate = DateTime.Now;
                     }
 
-         //           var tok = ObtainToken();
-         //           var info = tok.Claims.First(c => c.Type == "sub").Value;
-         //           var test = HttpContext.User.FindFirst(type: "sub")?.Value;
                     var currentUser = await _userManager.FindByNameAsync(User.Identity.Name);
                     newOrder.User = currentUser;
 
-                    _repository.AddEntity(newOrder);
+                    _repository.AddOrder(newOrder);
                     if (_repository.SaveAll())
                     {
                         return Created($"/api/orders/{newOrder.Id}", _mapper.Map<Order, OrderViewModel>(newOrder));
